@@ -52,10 +52,7 @@ const rows = [
 function App() {
   return (
     <ThemeProvider value={defaultTheme}>
-      <Box>
-        <Box>Hello</Box>
-      </Box>
-      <Text type={'heading'} size={'md'}>Sm Heading</Text>
+      <Text type={'heading'} size={'md'} color={'secondary'}>Sm Heading</Text>
       <Text type={'body'} size={'sm'}>Sm Body</Text>
       <AdvancedDataGrid
         rows={rows}
@@ -68,7 +65,6 @@ function App() {
           },
         }}
         pageSizeOptions={[5]}
-        disableRowSelectionOnClick
       />
     </ThemeProvider>
   )

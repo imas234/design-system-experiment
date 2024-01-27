@@ -5,8 +5,8 @@ export const defaultTheme = Object.freeze({
         primary: 'red',
         secondary: 'blue',
         text: {
-            primary: 'black',
-            secondary: 'white',
+            primary: 'red',
+            secondary: 'orange',
         }
     },
     typography: {
