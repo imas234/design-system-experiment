@@ -15,9 +15,11 @@
     "@mui/material": "^5.15.6",
     "@mui/x-data-grid": "^6.19.2",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0"
+    "react-dom": "^18.2.0",
+    "vite-plugin-dts": "^3.7.2"
   },
   "devDependencies": {
+    "@types/node": "^20.11.7",
     "@types/react": "^18.2.43",
     "@types/react-dom": "^18.2.17",
     "@typescript-eslint/eslint-plugin": "^6.14.0",
@@ -28,5 +30,16 @@
     "eslint-plugin-react-refresh": "^0.4.5",
     "typescript": "^5.2.2",
     "vite": "^5.0.8"
+  },
+  "files": [
+    "dist"
+  ],
+  "main": "./dist/main.umd.cjs",
+  "module": "./dist/main.js",
+  "exports": {
+    ".": {
+      "import": "./dist/main.js",
+      "require": "./dist/main.umd.cjs"
+    }
   }
 }

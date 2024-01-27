@@ -12,7 +12,7 @@ type TypographyType = BodyTypography | HeadingTypography;
 export type BodySize = keyof Theme['typography']['body'];
 export type HeadingSize = keyof Theme['typography']['heading'];
 
-interface BaseProp {
+interface TypographyTextPropsBase {
     children: string;
     color?: ThemeTextColor;
 }
@@ -27,7 +27,7 @@ type SizeProp =
     size: HeadingSize,
 }
 
-type Prop = BaseProp & SizeProp;
+export type TypographyTextProps = TypographyTextPropsBase & SizeProp;
 
 const evalSize = (type: TypographyType, size: string, theme: ThemeTypography) => {
     switch (type) {
@@ -54,7 +54,7 @@ const evalSize = (type: TypographyType, size: string, theme: ThemeTypography) =>
     }
 }
 
-export const Text = ({children, color = 'primary', type, size}: Prop) => {
+export const Text = ({children, color = 'primary', type, size}: TypographyTextProps) => {
     const theme = useTheme();
 
     const fontSize = evalSize(type, size, theme.typography);

@@ -55,8 +55,8 @@ function App() {
       <Box>
         <Box>Hello</Box>
       </Box>
-      <Text type={'heading'} size={'sm'}>bla</Text>
-      <Text type={'body'} size={'sm'}>more</Text>
+      <Text type={'heading'} size={'md'}>Sm Heading</Text>
+      <Text type={'body'} size={'sm'}>Sm Body</Text>
       <AdvancedDataGrid
         rows={rows}
         columns={columns}

@@ -1,5 +1,4 @@
 import React, { useEffect, useState } from 'react';
-import { Box } from '@mui/material';
 import { 
     DataGrid,
     DataGridProps, 
@@ -7,17 +6,12 @@ import {
     GridValueGetterParams,
     GridRow,
     useGridApiRef,
-    GridCellParams, 
-    GridRowProps, 
-    GridSlotsComponentsProps,
-    GridColumnsState,
-    GridRowId,
+    GridRowProps,
     GridCellProps,
     GridCell,
-    GridCellModesModel,
 } from '@mui/x-data-grid';
 import { useTheme } from '../../theme/ThemeContext';
-import { ThemeTextColor, BodySize, HeadingSize } from '../Typography'
+import { ThemeTextColor, BodySize } from '../Typography'
 
 type CustomProps = {
     treeData?: boolean,
@@ -119,17 +113,5 @@ export const AdvancedDataGrid = (props: Props) => {
 export type {
     Props,
     GridColDef,
-    GridCellParams,
     GridValueGetterParams,
-    DataGrid,
-    DataGridProps, 
-    GridRow,
-    useGridApiRef,
-    GridRowProps, 
-    GridSlotsComponentsProps,
-    GridColumnsState,
-    GridRowId,
-    GridCellProps,
-    GridCell,
-    GridCellModesModel,
 }
