@@ -1,10 +1,12 @@
-import React from 'react'
-import ReactDOM from 'react-dom/client'
-import App from './App.tsx'
-import './index.css'
+import { ThemeProvider, Theme, useTheme } from "./theme/ThemeContext";
+import { Text } from './components/Typography';
 
-ReactDOM.createRoot(document.getElementById('root')!).render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-)
+export default {
+  ThemeProvider,
+  useTheme,
+  Text
+}
+
+export type {
+  Theme
+}

@@ -29,7 +29,7 @@ type Theme = typeof defaultTheme;
 
 const ThemeContext = createContext<Theme>(defaultTheme);
 
-export const ThemeContextProvider = ThemeContext.Provider;
+export const ThemeProvider = ThemeContext.Provider;
 
 export const useTheme = () => useContext(ThemeContext);
 

@@ -2,15 +2,15 @@ import {Theme, useTheme } from '../../theme/ThemeContext';
 import Box from '@mui/material/Box';
 
 type ThemeTypography = Theme['typography'];
-type ThemeTextColor = keyof Theme['color']['text'];
+export type ThemeTextColor = keyof Theme['color']['text'];
 
 type BodyTypography = 'body';
 type HeadingTypography = 'heading';
 
 type TypographyType = BodyTypography | HeadingTypography;
 
-type BodySize = keyof Theme['typography']['body'];
-type HeadingSize = keyof Theme['typography']['heading'];
+export type BodySize = keyof Theme['typography']['body'];
+export type HeadingSize = keyof Theme['typography']['heading'];
 
 interface BaseProp {
     children: string;
@@ -60,8 +60,10 @@ export const Text = ({children, color = 'primary', type, size}: Prop) => {
     const fontSize = evalSize(type, size, theme.typography);
     const fontWeight = type === 'heading' ? 800 : 400;
 
+    const style = {color: theme.color.text[color], fontSize: `${fontSize}rem`, fontWeight: fontWeight};
+
     return (
-        <Box sx={{color: theme.color.text[color], fontSize: `${fontSize}rem`, fontWeight: fontWeight}}>
+        <Box sx={style}>
             {children}
         </Box>
     );
